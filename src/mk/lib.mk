@@ -7,5 +7,7 @@ $(TARGET): $(OBJ)
 	@echo "Linking the target $@"
 	@echo "============="
 	$(LD) -shared $^ $(LDFLAGS) -o $@ $(LIBS)
+	@mkdir -p ../lib
+	$(LN) $(shell pwd)/$@ $(shell pwd)/../lib/$(notdir $@)
 	@echo -- Link finished --
 

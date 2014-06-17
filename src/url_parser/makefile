@@ -1,15 +1,18 @@
 PREFIX=../mk
 -include $(PREFIX)/setup.mk
 
-TARGET	= url_parser.so
+TARGET	= liburlparser.so
 
 SOURCE	= \
 	url_parser.cpp
 
 ## End sources definition
-INCLUDE = -I./
+INCLUDE += -I./
 
 LDFLAGS		= 
 LIBS		= 
+
+PUBLIC_HEADERS = \
+	url_parser.hpp
 
 -include $(PREFIX)/lib.mk

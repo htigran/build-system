@@ -1,16 +1,17 @@
-PREFIX=../mk
+PREFIX	= ../mk
 -include $(PREFIX)/setup.mk
 
-TARGET	= test_url_parser
+TARGET		= test_url_parser
 
-SOURCE	= \
+SOURCE		= \
 	test_url_parser.cpp
 
 ## End sources definition
-INCLUDE = -I./
+INCLUDE 	+= -I./
 
-LDFLAGS		= 
-LIBS		= 
+LDFLAGS		+= 
+LIBS		+= -lurlparser
 
+PUBLIC_HEADERS = 
 
 -include $(PREFIX)/exe.mk
